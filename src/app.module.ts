@@ -7,7 +7,7 @@ import { ProdutoModule } from './produto/produto.module';
 
 @Module({
   imports: [
-    /*TypeOrmModule.forRoot({
+    TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
       port: 3306,
@@ -16,8 +16,8 @@ import { ProdutoModule } from './produto/produto.module';
       database: 'db_produtos_drywall',
       entities: [Produto],
       synchronize: true,
-    }),*/
-    TypeOrmModule.forRoot({
+    }),
+    /*TypeOrmModule.forRoot({
       type: 'postgres',
       url: process.env.DATABASE_URL,
       dropSchema: false,
@@ -26,7 +26,7 @@ import { ProdutoModule } from './produto/produto.module';
       },
       synchronize: true,
       autoLoadEntities: true,
-    }),
+    }),*/
     ProdutoModule
   ],
   controllers: [AppController],

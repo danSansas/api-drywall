@@ -13,6 +13,11 @@ export class Produto {
     name: string
 
     @IsNotEmpty()
+    @Column({length: 255, nullable: false})
+    @ApiProperty()
+    categoria: string
+
+    @IsNotEmpty()
     @Column({length: 2555})
     @ApiProperty()
     descricao: string
