@@ -18,7 +18,7 @@ export class Produto {
     categoria: string
     
     @IsNotEmpty()
-    @Column({length: 255})
+    @Column({length: 255, nullable: true})
     @ApiProperty()
     subCategoria: string
 
